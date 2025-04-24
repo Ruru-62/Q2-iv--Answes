@@ -1,0 +1,55 @@
+
+
+CREATE TABLE Lectures(
+    CourseID int NOT NULL PRIMARY KEY,
+    CourseName VARCHAR (250),
+    LecturersName VARCHAR (250),
+);
+
+CREATE TABLE Students(
+    StudentID int NOT NULL PRIMARY KEY,
+    FirstName VARCHAR (200),
+    LastName VARCHAR (200),
+    City VARCHAR (200),
+    CourseID int,
+    FOREIGN KEY  REFERENCES CourseID,
+);
+
+INSERT INTO Lectures 
+('CourseID', 'CourseName','LecturersName')
+VALUES
+(001, 'Web Development', 'M M', 'Herath'),
+(002, 'Graphic Design', 'J S V', 'Piyasena'),
+(003, 'Mobile App Development', 'K K S', 'Dias'),
+(004, 'Java', 'U H S', 'Perera');
+
+
+INSERT INTO Students
+('StudentID', 'FirstName', 'LastName', 'City', 'CourseID')
+VALUES
+(001,'Kasun', 'Gamage', 'Kandy', 2),
+(002,'Daniel', 'Sam', 'Jaffna', 3),
+(003,'Hansi', 'Silva', 'Colombo', 1),
+(004,'Ranidu', 'Herath', 'Matara', 3),
+(005,'Praneeth', 'Wijesinghe', 'Kandy', 4),
+(006,'Nuwani', 'Herath', 'Ratnapura', 1);
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
